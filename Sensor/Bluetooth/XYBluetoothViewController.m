@@ -18,11 +18,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"XY_Bluetooth", nil);
+    [XYBluetoothManager shareInstance];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)searchAction:(UIButton *)sender {
+    [[XYBluetoothManager shareInstance] searchSoftPeripherals:5];
 }
 
 - (void)dealloc
