@@ -43,7 +43,8 @@ typedef NS_ENUM(NSUInteger, XYBLESearchState) {
 @property (nonatomic, assign, readonly) XYBLEManagerState managerState;
 //
 @property (nonatomic, strong) NSArray<CBUUID *> *UUIDs;
-
+//当前连接的设备
+@property (nonatomic, strong) CBPeripheral *activePeripheral;
 /**
  开始扫描设备
 
@@ -56,5 +57,11 @@ typedef NS_ENUM(NSUInteger, XYBLESearchState) {
  停止扫描设备
  */
 - (void)stopScan;
+
+// 连接设备
+- (void)connect:(CBPeripheral *)peripheral;
+
+// 断开连接
+- (void)disconnect:(CBPeripheral *)peripheral;
 
 @end

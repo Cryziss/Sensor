@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XYBluetoothViewController">
             <connections>
+                <outlet property="list" destination="qg6-27-jJq" id="O9Y-jr-XSy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,13 +32,22 @@
                         <action selector="searchAction:" destination="-1" eventType="touchUpInside" id="ijD-py-n1w"/>
                     </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qg6-27-jJq">
+                    <rect key="frame" x="20" y="90" width="335" height="557"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="SxG-oA-huF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Deh-OX-cr6"/>
+                <constraint firstItem="qg6-27-jJq" firstAttribute="top" secondItem="SxG-oA-huF" secondAttribute="bottom" constant="20" id="J8T-GG-PWd"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="qg6-27-jJq" secondAttribute="bottom" constant="20" id="beT-hw-HsG"/>
+                <constraint firstItem="qg6-27-jJq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="cdN-W0-m2k"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="qg6-27-jJq" secondAttribute="trailing" constant="20" id="qpS-I1-1IV"/>
                 <constraint firstItem="SxG-oA-huF" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="s0Y-65-xOb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="33.5" y="88.5"/>
         </view>
     </objects>
 </document>
