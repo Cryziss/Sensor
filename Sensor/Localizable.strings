@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Sensor
+
+  Created by LX on 2018/5/4.
+  Copyright © 2018年 Sensor. All rights reserved.
+*/
+
+XY_Bluetooth = "蓝牙";//Bluetooth
+
+XY_Location = "定位";//Location
+
+XY_Accelerometer_Gyroscope = "加速度计、陀螺仪";//Accelerometer and Gyroscope
+
+XY_Compass_Magnetometer = "指南针、磁力计";//Compass and Magnetometer
+
+XY_Camera = "相机";//Camera
+
+XY_Voice = "音频";//Voice
+

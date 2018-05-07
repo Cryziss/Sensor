@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D019209C35DE0004FBD6 /* AppDelegate.m */; };
+		F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D01C209C35DE0004FBD6 /* ViewController.m */; };
+		F4F3D020209C35DE0004FBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D01E209C35DE0004FBD6 /* Main.storyboard */; };
+		F4F3D022209C35E00004FBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D021209C35E00004FBD6 /* Assets.xcassets */; };
+		F4F3D025209C35E00004FBD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D023209C35E00004FBD6 /* LaunchScreen.storyboard */; };
+		F4F3D028209C35E00004FBD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D027209C35E00004FBD6 /* main.m */; };
+		F4F3D032209C35E00004FBD6 /* SensorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D031209C35E00004FBD6 /* SensorTests.m */; };
+		F4F3D03D209C35E00004FBD6 /* SensorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D03C209C35E00004FBD6 /* SensorUITests.m */; };
+		F4F3D053209C40BF0004FBD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D055209C40BF0004FBD6 /* InfoPlist.strings */; };
+		F4F3D058209C41530004FBD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D057209C41530004FBD6 /* Localizable.strings */; };
+		F4F3D063209C43420004FBD6 /* XYBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */; };
+		F4F3D064209C43420004FBD6 /* XYBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */; };
+		F4F3D078209C47390004FBD6 /* XYBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D077209C47390004FBD6 /* XYBluetoothManager.m */; };
+		F4F3D07C209C4B0F0004FBD6 /* XYSensorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D07B209C4B0F0004FBD6 /* XYSensorMacros.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4F3D02E209C35E00004FBD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4F3D00D209C35DE0004FBD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4F3D014209C35DE0004FBD6;
+			remoteInfo = Sensor;
+		};
+		F4F3D039209C35E00004FBD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4F3D00D209C35DE0004FBD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4F3D014209C35DE0004FBD6;
+			remoteInfo = Sensor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4F3D015209C35DE0004FBD6 /* Sensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F3D018209C35DE0004FBD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F4F3D019209C35DE0004FBD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F4F3D01B209C35DE0004FBD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F4F3D01C209C35DE0004FBD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4F3D01F209C35DE0004FBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4F3D021209C35E00004FBD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4F3D024209C35E00004FBD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4F3D026209C35E00004FBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F3D027209C35E00004FBD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F4F3D02D209C35E00004FBD6 /* SensorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F3D031209C35E00004FBD6 /* SensorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorTests.m; sourceTree = "<group>"; };
+		F4F3D033209C35E00004FBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F3D038209C35E00004FBD6 /* SensorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4F3D03C209C35E00004FBD6 /* SensorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorUITests.m; sourceTree = "<group>"; };
+		F4F3D03E209C35E00004FBD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F3D04F209C407A0004FBD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F4F3D050209C407A0004FBD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F4F3D052209C409E0004FBD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F4F3D054209C40BF0004FBD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4F3D056209C40C10004FBD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F4F3D057209C41530004FBD6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F4F3D060209C43420004FBD6 /* XYBluetoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBluetoothViewController.h; sourceTree = "<group>"; };
+		F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBluetoothViewController.m; sourceTree = "<group>"; };
+		F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYBluetoothViewController.xib; sourceTree = "<group>"; };
+		F4F3D076209C47390004FBD6 /* XYBluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBluetoothManager.h; sourceTree = "<group>"; };
+		F4F3D077209C47390004FBD6 /* XYBluetoothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBluetoothManager.m; sourceTree = "<group>"; };
+		F4F3D07A209C4B0F0004FBD6 /* XYSensorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSensorMacros.h; sourceTree = "<group>"; };
+		F4F3D07B209C4B0F0004FBD6 /* XYSensorMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSensorMacros.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4F3D012209C35DE0004FBD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D02A209C35E00004FBD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D035209C35E00004FBD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4F3D00C209C35DE0004FBD6 = {
+			isa = PBXGroup;
+			children = (
+				F4F3D017209C35DE0004FBD6 /* Sensor */,
+				F4F3D030209C35E00004FBD6 /* SensorTests */,
+				F4F3D03B209C35E00004FBD6 /* SensorUITests */,
+				F4F3D016209C35DE0004FBD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4F3D016209C35DE0004FBD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D015209C35DE0004FBD6 /* Sensor.app */,
+				F4F3D02D209C35E00004FBD6 /* SensorTests.xctest */,
+				F4F3D038209C35E00004FBD6 /* SensorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4F3D017209C35DE0004FBD6 /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D06A209C46D50004FBD6 /* Manager */,
+				F4F3D018209C35DE0004FBD6 /* AppDelegate.h */,
+				F4F3D019209C35DE0004FBD6 /* AppDelegate.m */,
+				F4F3D01B209C35DE0004FBD6 /* ViewController.h */,
+				F4F3D01C209C35DE0004FBD6 /* ViewController.m */,
+				F4F3D05C209C42B70004FBD6 /* Bluetooth */,
+				F4F3D05A209C42B70004FBD6 /* Location */,
+				F4F3D05B209C42B70004FBD6 /* AccelerometerGyroscope */,
+				F4F3D059209C42B70004FBD6 /* CompassMagnetometer */,
+				F4F3D068209C46710004FBD6 /* Camera */,
+				F4F3D069209C46710004FBD6 /* Voice */,
+				F4F3D01E209C35DE0004FBD6 /* Main.storyboard */,
+				F4F3D021209C35E00004FBD6 /* Assets.xcassets */,
+				F4F3D023209C35E00004FBD6 /* LaunchScreen.storyboard */,
+				F4F3D026209C35E00004FBD6 /* Info.plist */,
+				F4F3D055209C40BF0004FBD6 /* InfoPlist.strings */,
+				F4F3D057209C41530004FBD6 /* Localizable.strings */,
+				F4F3D027209C35E00004FBD6 /* main.m */,
+			);
+			path = Sensor;
+			sourceTree = "<group>";
+		};
+		F4F3D030209C35E00004FBD6 /* SensorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D031209C35E00004FBD6 /* SensorTests.m */,
+				F4F3D033209C35E00004FBD6 /* Info.plist */,
+			);
+			path = SensorTests;
+			sourceTree = "<group>";
+		};
+		F4F3D03B209C35E00004FBD6 /* SensorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D03C209C35E00004FBD6 /* SensorUITests.m */,
+				F4F3D03E209C35E00004FBD6 /* Info.plist */,
+			);
+			path = SensorUITests;
+			sourceTree = "<group>";
+		};
+		F4F3D059209C42B70004FBD6 /* CompassMagnetometer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CompassMagnetometer;
+			sourceTree = "<group>";
+		};
+		F4F3D05A209C42B70004FBD6 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F4F3D05B209C42B70004FBD6 /* AccelerometerGyroscope */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccelerometerGyroscope;
+			sourceTree = "<group>";
+		};
+		F4F3D05C209C42B70004FBD6 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D060209C43420004FBD6 /* XYBluetoothViewController.h */,
+				F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */,
+				F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		F4F3D068209C46710004FBD6 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F4F3D069209C46710004FBD6 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		F4F3D06A209C46D50004FBD6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D070209C46D50004FBD6 /* Bluetooth */,
+				F4F3D06B209C46D50004FBD6 /* Camera */,
+				F4F3D06C209C46D50004FBD6 /* Location */,
+				F4F3D06D209C46D50004FBD6 /* AccelerometerGyroscope */,
+				F4F3D06E209C46D50004FBD6 /* CompassMagnetometer */,
+				F4F3D06F209C46D50004FBD6 /* Voice */,
+				F4F3D07A209C4B0F0004FBD6 /* XYSensorMacros.h */,
+				F4F3D07B209C4B0F0004FBD6 /* XYSensorMacros.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F4F3D06B209C46D50004FBD6 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F4F3D06C209C46D50004FBD6 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F4F3D06D209C46D50004FBD6 /* AccelerometerGyroscope */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccelerometerGyroscope;
+			sourceTree = "<group>";
+		};
+		F4F3D06E209C46D50004FBD6 /* CompassMagnetometer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CompassMagnetometer;
+			sourceTree = "<group>";
+		};
+		F4F3D06F209C46D50004FBD6 /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		F4F3D070209C46D50004FBD6 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				F4F3D076209C47390004FBD6 /* XYBluetoothManager.h */,
+				F4F3D077209C47390004FBD6 /* XYBluetoothManager.m */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4F3D014209C35DE0004FBD6 /* Sensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4F3D041209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "Sensor" */;
+			buildPhases = (
+				F4F3D011209C35DE0004FBD6 /* Sources */,
+				F4F3D012209C35DE0004FBD6 /* Frameworks */,
+				F4F3D013209C35DE0004FBD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sensor;
+			productName = Sensor;
+			productReference = F4F3D015209C35DE0004FBD6 /* Sensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4F3D02C209C35E00004FBD6 /* SensorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4F3D044209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorTests" */;
+			buildPhases = (
+				F4F3D029209C35E00004FBD6 /* Sources */,
+				F4F3D02A209C35E00004FBD6 /* Frameworks */,
+				F4F3D02B209C35E00004FBD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4F3D02F209C35E00004FBD6 /* PBXTargetDependency */,
+			);
+			name = SensorTests;
+			productName = SensorTests;
+			productReference = F4F3D02D209C35E00004FBD6 /* SensorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4F3D037209C35E00004FBD6 /* SensorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4F3D047209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorUITests" */;
+			buildPhases = (
+				F4F3D034209C35E00004FBD6 /* Sources */,
+				F4F3D035209C35E00004FBD6 /* Frameworks */,
+				F4F3D036209C35E00004FBD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4F3D03A209C35E00004FBD6 /* PBXTargetDependency */,
+			);
+			name = SensorUITests;
+			productName = SensorUITests;
+			productReference = F4F3D038209C35E00004FBD6 /* SensorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4F3D00D209C35DE0004FBD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Sensor;
+				TargetAttributes = {
+					F4F3D014209C35DE0004FBD6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F4F3D02C209C35E00004FBD6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F4F3D014209C35DE0004FBD6;
+					};
+					F4F3D037209C35E00004FBD6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F4F3D014209C35DE0004FBD6;
+					};
+				};
+			};
+			buildConfigurationList = F4F3D010209C35DE0004FBD6 /* Build configuration list for PBXProject "Sensor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = F4F3D00C209C35DE0004FBD6;
+			productRefGroup = F4F3D016209C35DE0004FBD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4F3D014209C35DE0004FBD6 /* Sensor */,
+				F4F3D02C209C35E00004FBD6 /* SensorTests */,
+				F4F3D037209C35E00004FBD6 /* SensorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4F3D013209C35DE0004FBD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F3D058209C41530004FBD6 /* Localizable.strings in Resources */,
+				F4F3D025209C35E00004FBD6 /* LaunchScreen.storyboard in Resources */,
+				F4F3D053209C40BF0004FBD6 /* InfoPlist.strings in Resources */,
+				F4F3D022209C35E00004FBD6 /* Assets.xcassets in Resources */,
+				F4F3D064209C43420004FBD6 /* XYBluetoothViewController.xib in Resources */,
+				F4F3D020209C35DE0004FBD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D02B209C35E00004FBD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D036209C35E00004FBD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4F3D011209C35DE0004FBD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F3D078209C47390004FBD6 /* XYBluetoothManager.m in Sources */,
+				F4F3D07C209C4B0F0004FBD6 /* XYSensorMacros.m in Sources */,
+				F4F3D063209C43420004FBD6 /* XYBluetoothViewController.m in Sources */,
+				F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */,
+				F4F3D028209C35E00004FBD6 /* main.m in Sources */,
+				F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D029209C35E00004FBD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F3D032209C35E00004FBD6 /* SensorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F3D034209C35E00004FBD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F3D03D209C35E00004FBD6 /* SensorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4F3D02F209C35E00004FBD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4F3D014209C35DE0004FBD6 /* Sensor */;
+			targetProxy = F4F3D02E209C35E00004FBD6 /* PBXContainerItemProxy */;
+		};
+		F4F3D03A209C35E00004FBD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4F3D014209C35DE0004FBD6 /* Sensor */;
+			targetProxy = F4F3D039209C35E00004FBD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4F3D01E209C35DE0004FBD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F3D01F209C35DE0004FBD6 /* Base */,
+				F4F3D04F209C407A0004FBD6 /* zh-Hans */,
+				F4F3D052209C409E0004FBD6 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4F3D023209C35E00004FBD6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F3D024209C35E00004FBD6 /* Base */,
+				F4F3D050209C407A0004FBD6 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4F3D055209C40BF0004FBD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4F3D054209C40BF0004FBD6 /* en */,
+				F4F3D056209C40C10004FBD6 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4F3D03F209C35E00004FBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F4F3D040209C35E00004FBD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4F3D042209C35E00004FBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFBGB9EWP5;
+				INFOPLIST_FILE = Sensor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.Sensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4F3D043209C35E00004FBD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFBGB9EWP5;
+				INFOPLIST_FILE = Sensor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.Sensor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4F3D045209C35E00004FBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SensorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor.app/Sensor";
+			};
+			name = Debug;
+		};
+		F4F3D046209C35E00004FBD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SensorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor.app/Sensor";
+			};
+			name = Release;
+		};
+		F4F3D048209C35E00004FBD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SensorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sensor;
+			};
+			name = Debug;
+		};
+		F4F3D049209C35E00004FBD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SensorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sensor;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4F3D010209C35DE0004FBD6 /* Build configuration list for PBXProject "Sensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F3D03F209C35E00004FBD6 /* Debug */,
+				F4F3D040209C35E00004FBD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4F3D041209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "Sensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F3D042209C35E00004FBD6 /* Debug */,
+				F4F3D043209C35E00004FBD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4F3D044209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F3D045209C35E00004FBD6 /* Debug */,
+				F4F3D046209C35E00004FBD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4F3D047209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4F3D048209C35E00004FBD6 /* Debug */,
+				F4F3D049209C35E00004FBD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4F3D00D209C35DE0004FBD6 /* Project object */;
+}

@@ -1,0 +1,51 @@
+/* 
+  InfoPlist.strings
+  Sensor
+
+  Created by LX on 2018/5/4.
+  Copyright © 2018年 Sensor. All rights reserved.
+*/
+//App Name
+CFBundleDisplayName = "Sensor";
+
+
+
+
+//NSMicrophoneUsageDescription                  麦克风权限
+//App需要您的同意,才能访问麦克风
+
+//NSCameraUsageDescription                         相机权限
+//App需要您的同意,才能访问相机
+
+//NSPhotoLibraryUsageDescription                  相册权限
+//App需要您的同意,才能访问相册
+
+//NSBluetoothPeripheralUsageDescription       蓝牙权限
+//App需要您的同意,才能访问蓝牙
+
+//NSSpeechRecognitionUsageDescription      语音转文字权限
+//
+
+//NSCalendarsUsageDescription                      日历权限
+//App需要您的同意,才能访问日历
+
+//NSLocationWhenInUseUsageDescription      定位权限
+//App需要您的同意,才能在使用期间访问位置
+
+//NSLocationAlwaysUsageDescription            定位权限
+//App需要您的同意,才能始终访问位置
+
+//NSRemindersUsageDescription 提醒事项
+//App需要您的同意,才能访问提醒事项
+
+//NSMotionUsageDescription
+//App需要您的同意,才能访问运动与健身
+
+//NSHealthUpdateUsageDescription
+//App需要您的同意,才能访问健康更新
+
+//NSHealthShareUsageDescription
+//App需要您的同意,才能访问健康分享
+
+//NSAppleMusicUsageDescription
+//App需要您的同意,才能访问媒体资料库
