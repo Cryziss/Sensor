@@ -12,8 +12,11 @@ static XYBluetoothManager *BluetoothManager = nil;
 
 @interface XYBluetoothManager () <CBCentralManagerDelegate>
 
-//peripheral list
+//所有设备列表
 @property (nonatomic, strong) NSMutableArray<CBPeripheral *> *peripherals;
+
+//所有连接设备
+@property (nonatomic, strong) NSMutableArray<CBPeripheral *> *connectPeripherals;
 
 @end
 
@@ -39,6 +42,7 @@ static XYBluetoothManager *BluetoothManager = nil;
 }
 
 #pragma mark - action
+
 // 开始扫描外设
 - (XYBLEManagerState)searchSoftPeripherals:(NSInteger)timeout{
     if (self.managerState == XYBLEManagerStatePoweredOn) {
@@ -63,6 +67,7 @@ static XYBluetoothManager *BluetoothManager = nil;
 }
 
 #pragma mark - CBCentralManagerDelegate
+
 // 中心设备的蓝牙状态发生变化之后会调用此方法
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central{
     switch (central.state) {
@@ -102,10 +107,10 @@ static XYBluetoothManager *BluetoothManager = nil;
  *
  */
 - (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *, id> *)dict{
-    
+    NSLog(@"应用从后台恢复到前台的时候,会和系统蓝牙进行同步,调用此方法");
 }
 
-//当扫描到设备时回调
+// 中心设备发现外设的时候调用的方法
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *, id> *)advertisementData RSSI:(NSNumber *)RSSI{
     if(peripheral.identifier == nil) { // identifier 为空 return
         return;
@@ -127,20 +132,24 @@ static XYBluetoothManager *BluetoothManager = nil;
         self.bluetoothArray = self.peripherals.copy;
     }
 }
-// 中心设备发现外设的时候调用的方法
-- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
-    
-}
+
 // 中心设备连接上外设时候调用的方法
-- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
-    
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
+    NSLog(@"中心设备连接上外设时候调用的方法");
 }
+
 // 中心设备连接外设失败时调用的方法
+- (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
+    NSLog(@"中心设备连接外设失败时调用的方法");
+}
+
+// 中心设备与已连接的外设断开连接时调用的方法
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
-    
+    NSLog(@"中心设备与已连接的外设断开连接时调用的方法");
 }
 
 #pragma mark - get action
+
 // 建立中心设备
 - (CBCentralManager *)centralManager{
     if (!_centralManager) {
@@ -148,6 +157,7 @@ static XYBluetoothManager *BluetoothManager = nil;
     }
     return _centralManager;
 }
+
 // 扫描到的设备数组
 - (NSMutableArray *)peripherals{
     if (!_peripherals) {

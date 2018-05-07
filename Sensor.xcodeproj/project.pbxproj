@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C352EB98D3AC488E6081AB /* libPods-SensorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7DC463169DC41AAF989D4E /* libPods-SensorUITests.a */; };
+		90C299C2F42219CCEE19003D /* libPods-SensorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACD262019A0292BB6278103 /* libPods-SensorTests.a */; };
+		C93442E0B895E8C3DAE887F9 /* libPods-Sensor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DC22AD4921934280572929 /* libPods-Sensor.a */; };
 		F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D019209C35DE0004FBD6 /* AppDelegate.m */; };
 		F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D01C209C35DE0004FBD6 /* ViewController.m */; };
 		F4F3D020209C35DE0004FBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D01E209C35DE0004FBD6 /* Main.storyboard */; };
@@ -41,6 +44,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A99093C6A24EBADC3DB6621 /* Pods-SensorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SensorUITests/Pods-SensorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1E7DC463169DC41AAF989D4E /* libPods-SensorUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SensorUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506475519AD5E31E3AADE801 /* Pods-Sensor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sensor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sensor/Pods-Sensor.debug.xcconfig"; sourceTree = "<group>"; };
+		6ACD262019A0292BB6278103 /* libPods-SensorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SensorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DC22AD4921934280572929 /* libPods-Sensor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sensor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E2CBAD61071F766C1A3688E /* Pods-Sensor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sensor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sensor/Pods-Sensor.release.xcconfig"; sourceTree = "<group>"; };
+		B89BFAAC1A8D2F227518FD5B /* Pods-SensorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorUITests/Pods-SensorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CBCCB23E786E2B49A4DB54CD /* Pods-SensorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.release.xcconfig"; sourceTree = "<group>"; };
+		E90AA0D0D502A2CBAFA51A27 /* Pods-SensorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4F3D015209C35DE0004FBD6 /* Sensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F3D018209C35DE0004FBD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F4F3D019209C35DE0004FBD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93442E0B895E8C3DAE887F9 /* libPods-Sensor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C299C2F42219CCEE19003D /* libPods-SensorTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,12 +105,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C352EB98D3AC488E6081AB /* libPods-SensorUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A880422E1E4E1F099C136A42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				506475519AD5E31E3AADE801 /* Pods-Sensor.debug.xcconfig */,
+				7E2CBAD61071F766C1A3688E /* Pods-Sensor.release.xcconfig */,
+				E90AA0D0D502A2CBAFA51A27 /* Pods-SensorTests.debug.xcconfig */,
+				CBCCB23E786E2B49A4DB54CD /* Pods-SensorTests.release.xcconfig */,
+				B89BFAAC1A8D2F227518FD5B /* Pods-SensorUITests.debug.xcconfig */,
+				0A99093C6A24EBADC3DB6621 /* Pods-SensorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3ABEBB80F4915F0F47D8716 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71DC22AD4921934280572929 /* libPods-Sensor.a */,
+				6ACD262019A0292BB6278103 /* libPods-SensorTests.a */,
+				1E7DC463169DC41AAF989D4E /* libPods-SensorUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4F3D00C209C35DE0004FBD6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +142,8 @@
 				F4F3D030209C35E00004FBD6 /* SensorTests */,
 				F4F3D03B209C35E00004FBD6 /* SensorUITests */,
 				F4F3D016209C35DE0004FBD6 /* Products */,
+				A880422E1E4E1F099C136A42 /* Pods */,
+				C3ABEBB80F4915F0F47D8716 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F3D041209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "Sensor" */;
 			buildPhases = (
+				F60E8E90698D7BDB75CABB93 /* [CP] Check Pods Manifest.lock */,
 				F4F3D011209C35DE0004FBD6 /* Sources */,
 				F4F3D012209C35DE0004FBD6 /* Frameworks */,
 				F4F3D013209C35DE0004FBD6 /* Resources */,
@@ -288,6 +329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F3D044209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorTests" */;
 			buildPhases = (
+				772893941B5BA9E492E0D8CF /* [CP] Check Pods Manifest.lock */,
 				F4F3D029209C35E00004FBD6 /* Sources */,
 				F4F3D02A209C35E00004FBD6 /* Frameworks */,
 				F4F3D02B209C35E00004FBD6 /* Resources */,
@@ -306,6 +348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4F3D047209C35E00004FBD6 /* Build configuration list for PBXNativeTarget "SensorUITests" */;
 			buildPhases = (
+				C53ABC5A80F6DAE760FEFDA7 /* [CP] Check Pods Manifest.lock */,
 				F4F3D034209C35E00004FBD6 /* Sources */,
 				F4F3D035209C35E00004FBD6 /* Frameworks */,
 				F4F3D036209C35E00004FBD6 /* Resources */,
@@ -392,6 +435,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		772893941B5BA9E492E0D8CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SensorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C53ABC5A80F6DAE760FEFDA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SensorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F60E8E90698D7BDB75CABB93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sensor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4F3D011209C35DE0004FBD6 /* Sources */ = {
@@ -584,15 +684,13 @@
 		};
 		F4F3D042209C35E00004FBD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 506475519AD5E31E3AADE801 /* Pods-Sensor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFBGB9EWP5;
 				INFOPLIST_FILE = Sensor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.Sensor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -601,15 +699,13 @@
 		};
 		F4F3D043209C35E00004FBD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E2CBAD61071F766C1A3688E /* Pods-Sensor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EFBGB9EWP5;
 				INFOPLIST_FILE = Sensor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.Sensor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -618,15 +714,12 @@
 		};
 		F4F3D045209C35E00004FBD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E90AA0D0D502A2CBAFA51A27 /* Pods-SensorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -636,15 +729,12 @@
 		};
 		F4F3D046209C35E00004FBD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBCCB23E786E2B49A4DB54CD /* Pods-SensorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,14 +744,11 @@
 		};
 		F4F3D048209C35E00004FBD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B89BFAAC1A8D2F227518FD5B /* Pods-SensorUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,14 +758,11 @@
 		};
 		F4F3D049209C35E00004FBD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A99093C6A24EBADC3DB6621 /* Pods-SensorUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SensorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cryziss.SensorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -45,11 +45,16 @@ typedef NS_ENUM(NSUInteger, XYBLESearchState) {
 @property (nonatomic, strong) NSArray<CBUUID *> *UUIDs;
 
 /**
- search Peripherals
+ 开始扫描设备
 
- @param timeout time out
- @return Bluetooth State
+ @param timeout 倒计时时间 小于等于0 的时候不执行倒计时
+ @return 蓝牙状态 只有 XYBLEManagerStatePoweredOn 才会开启扫描
  */
 - (XYBLEManagerState)searchSoftPeripherals:(NSInteger)timeout;
+
+/**
+ 停止扫描设备
+ */
+- (void)stopScan;
 
 @end
