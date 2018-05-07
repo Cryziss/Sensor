@@ -37,51 +37,33 @@ static XYBluetoothManager *BluetoothManager = nil;
     }
     return self;
 }
-//建立中心设备
-- (CBCentralManager *)centralManager{
-    if (!_centralManager) {
-        _centralManager = [[CBCentralManager alloc] init];
-    }
-    return _centralManager;
-}
-
-- (NSMutableArray *)peripherals{
-    if (!_peripherals) {
-        _peripherals = [NSMutableArray new];
-    }
-    return _peripherals;
-}
-
-- (void)setBluetoothArray:(NSArray *)bluetoothArray{
-    _bluetoothArray = bluetoothArray;
-}
-
-- (void)setManagerState:(XYBLEManagerState)managerState{
-    _managerState = managerState;
-}
 
 #pragma mark - action
-//扫描外设
+// 开始扫描外设
 - (XYBLEManagerState)searchSoftPeripherals:(NSInteger)timeout{
     if (self.managerState == XYBLEManagerStatePoweredOn) {
-        [NSTimer scheduledTimerWithTimeInterval:(float)timeout target:self selector:@selector(scanTimerOut:) userInfo:nil repeats:NO];
+        if (timeout > 0) { // 倒计时大于0的时候执行
+            [NSTimer scheduledTimerWithTimeInterval:(float)timeout target:self selector:@selector(scanTimerOut:) userInfo:nil repeats:NO];
+        }
         [self.centralManager scanForPeripheralsWithServices:self.UUIDs options:0];
     }
     return self.managerState;
 }
 
-/*
- * 倒计时结束
- */
-- (void)scanTimerOut:(NSTimer *)timer {
+// 停止扫描
+- (void)stopScan{
     [self.centralManager stopScan];
     NSLog(@"%@",self.bluetoothArray);
 }
 
+// 倒计时结束
+- (void)scanTimerOut:(NSTimer *)timer {
+    [self stopScan];
+    
+}
+
 #pragma mark - CBCentralManagerDelegate
-/*!
- *  状态更新
- */
+// 中心设备的蓝牙状态发生变化之后会调用此方法
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central{
     switch (central.state) {
         case CBManagerStateResetting: //重置中
@@ -112,18 +94,11 @@ static XYBluetoothManager *BluetoothManager = nil;
 }
 
 /*!
- *  @method centralManager:willRestoreState:
- *
- *  @param central      The central manager providing this information.
- *  @param dict            A dictionary containing information about <i>central</i> that was preserved by the system at the time the app was terminated.
- *
- *  @discussion            For apps that opt-in to state preservation and restoration, this is the first method invoked when your app is relaunched into
- *                        the background to complete some Bluetooth-related task. Use this method to synchronize your app's state with the state of the
- *                        Bluetooth system.
- *
- *  @seealso            CBCentralManagerRestoredStatePeripheralsKey;
- *  @seealso            CBCentralManagerRestoredStateScanServicesKey;
- *  @seealso            CBCentralManagerRestoredStateScanOptionsKey;
+ *  应用从后台恢复到前台的时候,会和系统蓝牙进行同步,调用此方法
+ 
+ *  @seealso            CBCentralManagerRestoredStatePeripheralsKey; // 返回一个中心设备正在连接的所有外设数组
+ *  @seealso            CBCentralManagerRestoredStateScanServicesKey; // 返回一个中心设备正在扫描的所有服务UUID的数组
+ *  @seealso            CBCentralManagerRestoredStateScanOptionsKey; // 返回一个字典包含正在被使用的外设的扫描选项
  *
  */
 - (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *, id> *)dict{
@@ -152,50 +127,41 @@ static XYBluetoothManager *BluetoothManager = nil;
         self.bluetoothArray = self.peripherals.copy;
     }
 }
-
-/*!
- *  @method centralManager:didConnectPeripheral:
- *
- *  @param central      The central manager providing this information.
- *  @param peripheral   The <code>CBPeripheral</code> that has connected.
- *
- *  @discussion         This method is invoked when a connection initiated by {@link connectPeripheral:options:} has succeeded.
- *
- */
-//当外设与中心设备连接成功回调
+// 中心设备发现外设的时候调用的方法
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
     
 }
-
-/*!
- *  @method centralManager:didFailToConnectPeripheral:error:
- *
- *  @param central      The central manager providing this information.
- *  @param peripheral   The <code>CBPeripheral</code> that has failed to connect.
- *  @param error        The cause of the failure.
- *
- *  @discussion         This method is invoked when a connection initiated by {@link connectPeripheral:options:} has failed to complete. As connection attempts do not
- *                      timeout, the failure of a connection is atypical and usually indicative of a transient issue.
- *
- */
+// 中心设备连接上外设时候调用的方法
 - (void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
     
 }
-
-/*!
- *  @method centralManager:didDisconnectPeripheral:error:
- *
- *  @param central      The central manager providing this information.
- *  @param peripheral   The <code>CBPeripheral</code> that has disconnected.
- *  @param error        If an error occurred, the cause of the failure.
- *
- *  @discussion         This method is invoked upon the disconnection of a peripheral that was connected by {@link connectPeripheral:options:}. If the disconnection
- *                      was not initiated by {@link cancelPeripheralConnection}, the cause will be detailed in the <i>error</i> parameter. Once this method has been
- *                      called, no more methods will be invoked on <i>peripheral</i>'s <code>CBPeripheralDelegate</code>.
- *
- */
+// 中心设备连接外设失败时调用的方法
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(nullable NSError *)error{
     
+}
+
+#pragma mark - get action
+// 建立中心设备
+- (CBCentralManager *)centralManager{
+    if (!_centralManager) {
+        _centralManager = [[CBCentralManager alloc] init];
+    }
+    return _centralManager;
+}
+// 扫描到的设备数组
+- (NSMutableArray *)peripherals{
+    if (!_peripherals) {
+        _peripherals = [NSMutableArray new];
+    }
+    return _peripherals;
+}
+
+- (void)setBluetoothArray:(NSArray *)bluetoothArray{
+    _bluetoothArray = bluetoothArray;
+}
+
+- (void)setManagerState:(XYBLEManagerState)managerState{
+    _managerState = managerState;
 }
 
 @end
