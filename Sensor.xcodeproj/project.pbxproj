@@ -10,6 +10,7 @@
 		05C352EB98D3AC488E6081AB /* libPods-SensorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7DC463169DC41AAF989D4E /* libPods-SensorUITests.a */; };
 		90C299C2F42219CCEE19003D /* libPods-SensorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACD262019A0292BB6278103 /* libPods-SensorTests.a */; };
 		C93442E0B895E8C3DAE887F9 /* libPods-Sensor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DC22AD4921934280572929 /* libPods-Sensor.a */; };
+		F4631E8F20A989D40081497F /* XYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4631E8E20A989D40081497F /* XYLocationManager.m */; };
 		F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D019209C35DE0004FBD6 /* AppDelegate.m */; };
 		F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D01C209C35DE0004FBD6 /* ViewController.m */; };
 		F4F3D020209C35DE0004FBD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D01E209C35DE0004FBD6 /* Main.storyboard */; };
@@ -53,6 +54,8 @@
 		B89BFAAC1A8D2F227518FD5B /* Pods-SensorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorUITests/Pods-SensorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBCCB23E786E2B49A4DB54CD /* Pods-SensorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.release.xcconfig"; sourceTree = "<group>"; };
 		E90AA0D0D502A2CBAFA51A27 /* Pods-SensorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4631E8D20A989D40081497F /* XYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocationManager.h; sourceTree = "<group>"; };
+		F4631E8E20A989D40081497F /* XYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocationManager.m; sourceTree = "<group>"; };
 		F48F01B520A02D8F00545E3D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F4F3D015209C35DE0004FBD6 /* Sensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F3D018209C35DE0004FBD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -265,10 +268,10 @@
 			isa = PBXGroup;
 			children = (
 				F4F3D070209C46D50004FBD6 /* Bluetooth */,
+				F4F3D06C209C46D50004FBD6 /* Location */,
 				F4631E8B20A988CA0081497F /* 3DTouch */,
 				F4631E8A20A988CA0081497F /* PhotoAlbum */,
 				F4F3D06B209C46D50004FBD6 /* Camera */,
-				F4F3D06C209C46D50004FBD6 /* Location */,
 				F4F3D06D209C46D50004FBD6 /* AccelerometerGyroscope */,
 				F4F3D06E209C46D50004FBD6 /* CompassMagnetometer */,
 				F4F3D06F209C46D50004FBD6 /* Voice */,
@@ -288,6 +291,8 @@
 		F4F3D06C209C46D50004FBD6 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				F4631E8D20A989D40081497F /* XYLocationManager.h */,
+				F4631E8E20A989D40081497F /* XYLocationManager.m */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F3D078209C47390004FBD6 /* XYBluetoothManager.m in Sources */,
+				F4631E8F20A989D40081497F /* XYLocationManager.m in Sources */,
 				F4F3D07C209C4B0F0004FBD6 /* XYSensorMacros.m in Sources */,
 				F4F3D063209C43420004FBD6 /* XYBluetoothViewController.m in Sources */,
 				F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */,
