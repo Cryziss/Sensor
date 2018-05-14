@@ -90,10 +90,10 @@ void transform_earth_2_mars(double lat, double lng, double* tarLat, double* tarL
                 strongSelf.ocean = placemark.ocean;//海洋
                 strongSelf.areasOfInterest = placemark.areasOfInterest;//关联的活利益相关的地标
             } else {
-//                self.viewModel.errorMessage = @"定位城市失败";
+                NSLog(@"定位城市失败");
             }
         } else {
-//            self.viewModel.errorMessage = @"请检查您的网络";
+            NSLog(@"请检查您的网络");
         }
     }];
 }

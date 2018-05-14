@@ -49,6 +49,7 @@ typedef NS_ENUM(NSUInteger, LocationStateType) {
  @param distanceFilter 设置每隔多远定位一次
  */
 - (void)startUpdatingLocationWith:(CLLocationAccuracy)desiredAccuracy DistanceFilter:(CLLocationDistance)distanceFilter;
+
 - (void)stopUpdatingLocation;
 //位置坐标
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
