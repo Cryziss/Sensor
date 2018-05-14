@@ -10,12 +10,12 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 typedef NS_ENUM(NSUInteger, XYBLEManagerState) {
-    XYBLEManagerStateUnknown = 0,//未知
-    XYBLEManagerStateResetting,//重置中
-    XYBLEManagerStateUnsupported,//不支持
-    XYBLEManagerStateUnauthorized,//未授权
-    XYBLEManagerStatePoweredOff,//关闭中
-    XYBLEManagerStatePoweredOn,//开启中
+    XYBLEManagerStateUnknown = 0,   //未知
+    XYBLEManagerStateResetting,     //重置中
+    XYBLEManagerStateUnsupported,   //不支持
+    XYBLEManagerStateUnauthorized,  //未授权
+    XYBLEManagerStatePoweredOff,    //关闭中
+    XYBLEManagerStatePoweredOn,     //开启中
 };
 
 typedef NS_ENUM(NSUInteger, XYBLESearchState) {
@@ -34,13 +34,13 @@ typedef NS_ENUM(NSUInteger, XYBLESearchState) {
 
 //@property (nonatomic, weak) id<XYBluetoothManagerDelegate> delegate;
 
-//
+//外设列表
 @property (nonatomic, strong, readonly) NSArray<CBPeripheral *> *bluetoothArray;
 
-//
+//管理
 @property (nonatomic, strong) CBCentralManager *centralManager;
 
-//
+//蓝牙状态
 @property (nonatomic, assign, readonly) XYBLEManagerState managerState;
 
 //

@@ -136,6 +136,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F4631E8A20A988CA0081497F /* PhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoAlbum;
+			sourceTree = "<group>";
+		};
+		F4631E8B20A988CA0081497F /* 3DTouch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 3DTouch;
+			sourceTree = "<group>";
+		};
 		F4F3D00C209C35DE0004FBD6 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				F4F3D070209C46D50004FBD6 /* Bluetooth */,
+				F4631E8B20A988CA0081497F /* 3DTouch */,
+				F4631E8A20A988CA0081497F /* PhotoAlbum */,
 				F4F3D06B209C46D50004FBD6 /* Camera */,
 				F4F3D06C209C46D50004FBD6 /* Location */,
 				F4F3D06D209C46D50004FBD6 /* AccelerometerGyroscope */,
