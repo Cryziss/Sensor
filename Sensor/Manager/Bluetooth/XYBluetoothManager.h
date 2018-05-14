@@ -32,23 +32,27 @@ typedef NS_ENUM(NSUInteger, XYBLESearchState) {
 
 @interface XYBluetoothManager : NSObject
 
-+ (instancetype)shareInstance;
-
 //@property (nonatomic, weak) id<XYBluetoothManagerDelegate> delegate;
+
 //
 @property (nonatomic, strong, readonly) NSArray<CBPeripheral *> *bluetoothArray;
+
 //
 @property (nonatomic, strong) CBCentralManager *centralManager;
+
 //
 @property (nonatomic, assign, readonly) XYBLEManagerState managerState;
+
 //
 @property (nonatomic, strong) NSArray<CBUUID *> *UUIDs;
+
 //当前连接的设备
 @property (nonatomic, strong) CBPeripheral *activePeripheral;
+
 /**
  开始扫描设备
 
- @param timeout 倒计时时间 小于等于0 的时候不执行倒计时
+ @param timeout 倒计时时间 小于等于0 的时候不执行倒计时 
  @return 蓝牙状态 只有 XYBLEManagerStatePoweredOn 才会开启扫描
  */
 - (XYBLEManagerState)searchSoftPeripherals:(NSInteger)timeout;

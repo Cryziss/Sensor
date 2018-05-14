@@ -12,6 +12,8 @@
 @interface XYBluetoothViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *list;
 
+@property (nonatomic, strong) XYBluetoothManager *bluetoothManager;
+
 @end
 
 @implementation XYBluetoothViewController
@@ -23,7 +25,7 @@
     _list.delegate = self;
     _list.dataSource = self;
     @weakify(self);
-    [RACObserve([XYBluetoothManager shareInstance], managerState) subscribeNext:^(id  _Nullable x) {
+    [RACObserve(self.bluetoothManager, managerState) subscribeNext:^(id  _Nullable x) {
 //        @strongify(self);
         switch ([x integerValue]) {
             case XYBLEManagerStateResetting:
@@ -45,9 +47,9 @@
                 NSLog(@"未知");
                 break;
         }
-        
+
     }];
-    [RACObserve([XYBluetoothManager shareInstance], bluetoothArray) subscribeNext:^(id  _Nullable x) {
+    [RACObserve(self.bluetoothManager, bluetoothArray) subscribeNext:^(id  _Nullable x) {
         @strongify(self);
         if (x) {
             [self.list reloadData];
@@ -56,13 +58,13 @@
 }
 
 - (IBAction)searchAction:(UIButton *)sender {
-    [[XYBluetoothManager shareInstance] searchSoftPeripherals:5];
+    [self.bluetoothManager searchSoftPeripherals:5];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [XYBluetoothManager shareInstance].bluetoothArray.count;
+    return self.bluetoothManager.bluetoothArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -70,8 +72,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UITableViewCell"];
     }
-    if ([XYBluetoothManager shareInstance].bluetoothArray.count > indexPath.row) {
-        CBPeripheral *peripheral = [XYBluetoothManager shareInstance].bluetoothArray[indexPath.row];
+    if (self.bluetoothManager.bluetoothArray.count > indexPath.row) {
+        CBPeripheral *peripheral = self.bluetoothManager.bluetoothArray[indexPath.row];
         cell.textLabel.text = peripheral.name;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld",(long)peripheral.state];
     }
@@ -79,12 +81,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([XYBluetoothManager shareInstance].bluetoothArray.count > indexPath.row) {
-        CBPeripheral *peripheral = [XYBluetoothManager shareInstance].bluetoothArray[indexPath.row];
+    if (self.bluetoothManager.bluetoothArray.count > indexPath.row) {
+        CBPeripheral *peripheral = self.bluetoothManager.bluetoothArray[indexPath.row];
         if (peripheral.state == CBPeripheralStateConnected) {
-            [[XYBluetoothManager shareInstance] disconnect:peripheral];
+            [self.bluetoothManager disconnect:peripheral];
         }else{
-            [[XYBluetoothManager shareInstance] connect:peripheral];
+            [self.bluetoothManager connect:peripheral];
         }
     }
 }
@@ -94,4 +96,12 @@
     NSLog(@"%@-dealloc",NSStringFromClass(self.class));
 }
 
+
+#pragma mark - get action
+- (XYBluetoothManager *)bluetoothManager{
+    if (!_bluetoothManager) {
+        _bluetoothManager = [XYBluetoothManager new];
+    }
+    return _bluetoothManager;
+}
 @end

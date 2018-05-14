@@ -8,9 +8,7 @@
 
 #import "XYBluetoothManager.h"
 
-static XYBluetoothManager *BluetoothManager = nil;
-
-@interface XYBluetoothManager () <CBCentralManagerDelegate>
+@interface XYBluetoothManager () <CBCentralManagerDelegate , CBPeripheralDelegate>
 
 //所有设备列表
 @property (nonatomic, strong) NSMutableArray<CBPeripheral *> *peripherals;
@@ -20,16 +18,6 @@ static XYBluetoothManager *BluetoothManager = nil;
 @end
 
 @implementation XYBluetoothManager
-
-+ (instancetype)shareInstance{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (BluetoothManager == nil ) {
-            BluetoothManager = [[XYBluetoothManager alloc] init];
-        }
-    });
-    return BluetoothManager;
-}
 
 - (instancetype)init
 {
@@ -78,12 +66,101 @@ static XYBluetoothManager *BluetoothManager = nil;
 // 连接设备
 - (void)connect:(CBPeripheral *)peripheral {
     if (!(peripheral.state == CBPeripheralStateConnected)) {
+        /*
+         options中可以设置一些连接设备的初始属性键值如下
+         //对应NSNumber的bool值，设置当外设连接后是否弹出一个警告
+         NSString *const CBConnectPeripheralOptionNotifyOnConnectionKey;
+         //对应NSNumber的bool值，设置当外设断开连接后是否弹出一个警告
+         NSString *const CBConnectPeripheralOptionNotifyOnDisconnectionKey;
+         //对应NSNumber的bool值，设置当外设暂停连接后是否弹出一个警告
+         NSString *const CBConnectPeripheralOptionNotifyOnNotificationKey;
+         */
         [self.centralManager connectPeripheral:peripheral options:nil];
     }
 }
 // 断开连接
 - (void)disconnect:(CBPeripheral *)peripheral {
     [self.centralManager cancelPeripheralConnection:peripheral];
+}
+
+#pragma mark - CBPeripheralDelegate
+// 外设名称更改时回调的方法
+- (void)peripheralDidUpdateName:(CBPeripheral *)peripheral NS_AVAILABLE(10_9, 6_0){
+    
+}
+// 外设服务变化时回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray<CBService *> *)invalidatedServices{
+    
+}
+
+//信号强度改变时调用的方法
+//- (void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(nullable NSError *)error{
+//
+//}
+
+// 读取信号强度回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didReadRSSI:(NSNumber *)RSSI error:(nullable NSError *)error{
+    
+}
+// 发现服务时调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(nullable NSError *)error{
+    
+}
+// 在服务中发现子服务回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverIncludedServicesForService:(CBService *)service error:(nullable NSError *)error{
+    
+}
+// 发现服务的特征值后回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(nullable NSError *)error{
+    
+}
+// 特征值更新时回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error{
+    
+}
+// 向特征值写数据时回调的方法
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error{
+    
+}
+// 特征值的通知设置改变时触发的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error{
+    
+}
+// 发现特征值的描述信息触发的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error{
+    
+}
+// 特征的描述值更新时触发的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForDescriptor:(CBDescriptor *)descriptor error:(nullable NSError *)error{
+    
+}
+// 写描述信息时触发的方法
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(nullable NSError *)error{
+    
+}
+/*!
+ *  @method peripheralIsReadyToSendWriteWithoutResponse:
+ *
+ *  @param peripheral   当前设备
+ *
+ *  @discussion        该方法被调用，当 writeValue:forCharacteristic:type失败，设备再次可以发送服务特征值时调用
+ *
+ */
+- (void)peripheralIsReadyToSendWriteWithoutResponse:(CBPeripheral *)peripheral{
+    
+}
+
+/*!
+ *  @method peripheral:didOpenL2CAPChannel:error:
+ *
+ *  @param peripheral       当前设备
+ *  @param channel          CBL2CAPChanne
+ *  @param error            错误信息
+ *
+ *  @discussion             该方法为openL2CAPChannel: 回调
+ */
+- (void)peripheral:(CBPeripheral *)peripheral didOpenL2CAPChannel:(nullable CBL2CAPChannel *)channel error:(nullable NSError *)error{
+    
 }
 
 #pragma mark - CBCentralManagerDelegate
@@ -138,10 +215,7 @@ static XYBluetoothManager *BluetoothManager = nil;
 // 中心设备连接上外设时候调用的方法
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
     NSLog(@"中心设备连接上外设时候调用的方法");
-#warning TODO 要取消上个连接吗
     self.activePeripheral = peripheral;
-    self.activePeripheral.delegate = self;
-    [self.activePeripheral discoverServices:nil];
     [self updatePeripherals:peripheral];
 }
 
@@ -174,6 +248,19 @@ static XYBluetoothManager *BluetoothManager = nil;
 }
 
 #pragma mark - get action
+
+- (void)setActivePeripheral:(CBPeripheral *)activePeripheral{
+    if (![_activePeripheral isEqual:activePeripheral]) {
+        //移除上一个
+        if (_activePeripheral && _activePeripheral.state != CBPeripheralStateDisconnected) {
+            [self disconnect:_activePeripheral];
+        }
+        //添加新的
+        _activePeripheral = activePeripheral;
+        _activePeripheral.delegate = self;
+        [_activePeripheral discoverServices:nil];
+    }
+}
 
 // 建立中心设备
 - (CBCentralManager *)centralManager{
