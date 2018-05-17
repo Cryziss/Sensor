@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "XYBluetoothViewController.h"
-#import "XYBluetoothManager.h"
+#import "XYLocationViewController.h"
+#import "XYCameraViewController.h"
 
 @interface ViewController () <UITableViewDataSource>
 
@@ -67,13 +68,15 @@
         XYBluetoothViewController *bluetoothVC = [[XYBluetoothViewController alloc] initWithNibName:@"XYBluetoothViewController" bundle:nil];
         [self.navigationController pushViewController:bluetoothVC animated:YES];
     } else if (indexPath.row == 1) {
-        
+        XYLocationViewController *locationVC = [[XYLocationViewController alloc] initWithNibName:@"XYLocationViewController" bundle:nil];
+        [self.navigationController pushViewController:locationVC animated:YES];
     } else if (indexPath.row == 2) {
         
     } else if (indexPath.row == 3) {
         
     } else if (indexPath.row == 4) {
-        
+        XYCameraViewController *cameraVC = [[XYCameraViewController alloc] initWithNibName:@"XYCameraViewController" bundle:nil];
+        [self.navigationController pushViewController:cameraVC animated:YES];
     } else if (indexPath.row == 5) {
         
     } else if (indexPath.row == 6) {

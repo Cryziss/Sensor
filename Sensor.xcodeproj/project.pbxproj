@@ -10,6 +10,13 @@
 		05C352EB98D3AC488E6081AB /* libPods-SensorUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7DC463169DC41AAF989D4E /* libPods-SensorUITests.a */; };
 		90C299C2F42219CCEE19003D /* libPods-SensorTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACD262019A0292BB6278103 /* libPods-SensorTests.a */; };
 		C93442E0B895E8C3DAE887F9 /* libPods-Sensor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DC22AD4921934280572929 /* libPods-Sensor.a */; };
+		F44BCA8F20AD6FA100EA994D /* XYBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44BCA8620AD6FA000EA994D /* XYBluetoothViewController.xib */; };
+		F44BCA9020AD6FA100EA994D /* XYCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BCA8820AD6FA000EA994D /* XYCameraViewController.m */; };
+		F44BCA9120AD6FA100EA994D /* XYCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44BCA8A20AD6FA000EA994D /* XYCameraViewController.xib */; };
+		F44BCA9220AD6FA100EA994D /* XYLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F44BCA8B20AD6FA000EA994D /* XYLocationViewController.xib */; };
+		F44BCA9320AD6FA100EA994D /* XYBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BCA8D20AD6FA000EA994D /* XYBluetoothViewController.m */; };
+		F44BCA9420AD6FA100EA994D /* XYLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BCA8E20AD6FA000EA994D /* XYLocationViewController.m */; };
+		F44BCA9720AD730C00EA994D /* XYCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BCA9620AD730C00EA994D /* XYCameraManager.m */; };
 		F4631E8F20A989D40081497F /* XYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4631E8E20A989D40081497F /* XYLocationManager.m */; };
 		F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D019209C35DE0004FBD6 /* AppDelegate.m */; };
 		F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D01C209C35DE0004FBD6 /* ViewController.m */; };
@@ -21,8 +28,6 @@
 		F4F3D03D209C35E00004FBD6 /* SensorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D03C209C35E00004FBD6 /* SensorUITests.m */; };
 		F4F3D053209C40BF0004FBD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D055209C40BF0004FBD6 /* InfoPlist.strings */; };
 		F4F3D058209C41530004FBD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D057209C41530004FBD6 /* Localizable.strings */; };
-		F4F3D063209C43420004FBD6 /* XYBluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */; };
-		F4F3D064209C43420004FBD6 /* XYBluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */; };
 		F4F3D078209C47390004FBD6 /* XYBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D077209C47390004FBD6 /* XYBluetoothManager.m */; };
 		F4F3D07C209C4B0F0004FBD6 /* XYSensorMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F3D07B209C4B0F0004FBD6 /* XYSensorMacros.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,17 @@
 		B89BFAAC1A8D2F227518FD5B /* Pods-SensorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorUITests/Pods-SensorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CBCCB23E786E2B49A4DB54CD /* Pods-SensorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.release.xcconfig"; sourceTree = "<group>"; };
 		E90AA0D0D502A2CBAFA51A27 /* Pods-SensorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SensorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SensorTests/Pods-SensorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F44BCA8620AD6FA000EA994D /* XYBluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYBluetoothViewController.xib; sourceTree = "<group>"; };
+		F44BCA8720AD6FA000EA994D /* XYCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCameraViewController.h; sourceTree = "<group>"; };
+		F44BCA8820AD6FA000EA994D /* XYCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCameraViewController.m; sourceTree = "<group>"; };
+		F44BCA8920AD6FA000EA994D /* XYBluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYBluetoothViewController.h; sourceTree = "<group>"; };
+		F44BCA8A20AD6FA000EA994D /* XYCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYCameraViewController.xib; sourceTree = "<group>"; };
+		F44BCA8B20AD6FA000EA994D /* XYLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYLocationViewController.xib; sourceTree = "<group>"; };
+		F44BCA8C20AD6FA000EA994D /* XYLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocationViewController.h; sourceTree = "<group>"; };
+		F44BCA8D20AD6FA000EA994D /* XYBluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYBluetoothViewController.m; sourceTree = "<group>"; };
+		F44BCA8E20AD6FA000EA994D /* XYLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocationViewController.m; sourceTree = "<group>"; };
+		F44BCA9520AD730C00EA994D /* XYCameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCameraManager.h; sourceTree = "<group>"; };
+		F44BCA9620AD730C00EA994D /* XYCameraManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCameraManager.m; sourceTree = "<group>"; };
 		F4631E8D20A989D40081497F /* XYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocationManager.h; sourceTree = "<group>"; };
 		F4631E8E20A989D40081497F /* XYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocationManager.m; sourceTree = "<group>"; };
 		F48F01B520A02D8F00545E3D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -79,9 +95,6 @@
 		F4F3D054209C40BF0004FBD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4F3D056209C40C10004FBD6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F4F3D057209C41530004FBD6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		F4F3D060209C43420004FBD6 /* XYBluetoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBluetoothViewController.h; sourceTree = "<group>"; };
-		F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBluetoothViewController.m; sourceTree = "<group>"; };
-		F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYBluetoothViewController.xib; sourceTree = "<group>"; };
 		F4F3D076209C47390004FBD6 /* XYBluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYBluetoothManager.h; sourceTree = "<group>"; };
 		F4F3D077209C47390004FBD6 /* XYBluetoothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYBluetoothManager.m; sourceTree = "<group>"; };
 		F4F3D07A209C4B0F0004FBD6 /* XYSensorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSensorMacros.h; sourceTree = "<group>"; };
@@ -178,17 +191,20 @@
 		F4F3D017209C35DE0004FBD6 /* Sensor */ = {
 			isa = PBXGroup;
 			children = (
+				F44BCA8920AD6FA000EA994D /* XYBluetoothViewController.h */,
+				F44BCA8D20AD6FA000EA994D /* XYBluetoothViewController.m */,
+				F44BCA8620AD6FA000EA994D /* XYBluetoothViewController.xib */,
+				F44BCA8C20AD6FA000EA994D /* XYLocationViewController.h */,
+				F44BCA8E20AD6FA000EA994D /* XYLocationViewController.m */,
+				F44BCA8B20AD6FA000EA994D /* XYLocationViewController.xib */,
+				F44BCA8720AD6FA000EA994D /* XYCameraViewController.h */,
+				F44BCA8820AD6FA000EA994D /* XYCameraViewController.m */,
+				F44BCA8A20AD6FA000EA994D /* XYCameraViewController.xib */,
 				F4F3D06A209C46D50004FBD6 /* Manager */,
 				F4F3D018209C35DE0004FBD6 /* AppDelegate.h */,
 				F4F3D019209C35DE0004FBD6 /* AppDelegate.m */,
 				F4F3D01B209C35DE0004FBD6 /* ViewController.h */,
 				F4F3D01C209C35DE0004FBD6 /* ViewController.m */,
-				F4F3D05C209C42B70004FBD6 /* Bluetooth */,
-				F4F3D05A209C42B70004FBD6 /* Location */,
-				F4F3D05B209C42B70004FBD6 /* AccelerometerGyroscope */,
-				F4F3D059209C42B70004FBD6 /* CompassMagnetometer */,
-				F4F3D068209C46710004FBD6 /* Camera */,
-				F4F3D069209C46710004FBD6 /* Voice */,
 				F4F3D01E209C35DE0004FBD6 /* Main.storyboard */,
 				F4F3D021209C35E00004FBD6 /* Assets.xcassets */,
 				F4F3D023209C35E00004FBD6 /* LaunchScreen.storyboard */,
@@ -219,59 +235,14 @@
 			path = SensorUITests;
 			sourceTree = "<group>";
 		};
-		F4F3D059209C42B70004FBD6 /* CompassMagnetometer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CompassMagnetometer;
-			sourceTree = "<group>";
-		};
-		F4F3D05A209C42B70004FBD6 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Location;
-			sourceTree = "<group>";
-		};
-		F4F3D05B209C42B70004FBD6 /* AccelerometerGyroscope */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AccelerometerGyroscope;
-			sourceTree = "<group>";
-		};
-		F4F3D05C209C42B70004FBD6 /* Bluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				F4F3D060209C43420004FBD6 /* XYBluetoothViewController.h */,
-				F4F3D061209C43420004FBD6 /* XYBluetoothViewController.m */,
-				F4F3D062209C43420004FBD6 /* XYBluetoothViewController.xib */,
-			);
-			path = Bluetooth;
-			sourceTree = "<group>";
-		};
-		F4F3D068209C46710004FBD6 /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
-		F4F3D069209C46710004FBD6 /* Voice */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Voice;
-			sourceTree = "<group>";
-		};
 		F4F3D06A209C46D50004FBD6 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				F4F3D070209C46D50004FBD6 /* Bluetooth */,
 				F4F3D06C209C46D50004FBD6 /* Location */,
+				F4F3D06B209C46D50004FBD6 /* Camera */,
 				F4631E8B20A988CA0081497F /* 3DTouch */,
 				F4631E8A20A988CA0081497F /* PhotoAlbum */,
-				F4F3D06B209C46D50004FBD6 /* Camera */,
 				F4F3D06D209C46D50004FBD6 /* AccelerometerGyroscope */,
 				F4F3D06E209C46D50004FBD6 /* CompassMagnetometer */,
 				F4F3D06F209C46D50004FBD6 /* Voice */,
@@ -284,6 +255,8 @@
 		F4F3D06B209C46D50004FBD6 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				F44BCA9520AD730C00EA994D /* XYCameraManager.h */,
+				F44BCA9620AD730C00EA994D /* XYCameraManager.m */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -438,7 +411,9 @@
 				F4F3D025209C35E00004FBD6 /* LaunchScreen.storyboard in Resources */,
 				F4F3D053209C40BF0004FBD6 /* InfoPlist.strings in Resources */,
 				F4F3D022209C35E00004FBD6 /* Assets.xcassets in Resources */,
-				F4F3D064209C43420004FBD6 /* XYBluetoothViewController.xib in Resources */,
+				F44BCA8F20AD6FA100EA994D /* XYBluetoothViewController.xib in Resources */,
+				F44BCA9120AD6FA100EA994D /* XYCameraViewController.xib in Resources */,
+				F44BCA9220AD6FA100EA994D /* XYLocationViewController.xib in Resources */,
 				F4F3D020209C35DE0004FBD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,10 +499,13 @@
 				F4F3D078209C47390004FBD6 /* XYBluetoothManager.m in Sources */,
 				F4631E8F20A989D40081497F /* XYLocationManager.m in Sources */,
 				F4F3D07C209C4B0F0004FBD6 /* XYSensorMacros.m in Sources */,
-				F4F3D063209C43420004FBD6 /* XYBluetoothViewController.m in Sources */,
 				F4F3D01D209C35DE0004FBD6 /* ViewController.m in Sources */,
+				F44BCA9320AD6FA100EA994D /* XYBluetoothViewController.m in Sources */,
+				F44BCA9720AD730C00EA994D /* XYCameraManager.m in Sources */,
 				F4F3D028209C35E00004FBD6 /* main.m in Sources */,
 				F4F3D01A209C35DE0004FBD6 /* AppDelegate.m in Sources */,
+				F44BCA9020AD6FA100EA994D /* XYCameraViewController.m in Sources */,
+				F44BCA9420AD6FA100EA994D /* XYLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

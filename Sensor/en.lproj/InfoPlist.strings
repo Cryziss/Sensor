@@ -8,32 +8,24 @@
 //App Name
 CFBundleDisplayName = "Sensor";
 
+NSBluetoothPeripheralUsageDescription  = "BLE Authorization";
 
+NSLocationWhenInUseUsageDescription = "Location Authorization When In Use";
 
+NSMicrophoneUsageDescription  = "Microphone Authorization";
 
-//NSMicrophoneUsageDescription                  麦克风权限
-//App需要您的同意,才能访问麦克风
+NSCameraUsageDescription  = "Camera Authorization";
 
-//NSCameraUsageDescription                         相机权限
-//App需要您的同意,才能访问相机
+NSPhotoLibraryUsageDescription = "PhotoLibrary Authorization";
 
-//NSPhotoLibraryUsageDescription                  相册权限
-//App需要您的同意,才能访问相册
+NSLocationAlwaysUsageDescription = "Location Authorization Always";
 
-//NSBluetoothPeripheralUsageDescription       蓝牙权限
-//App需要您的同意,才能访问蓝牙
 
 //NSSpeechRecognitionUsageDescription      语音转文字权限
 //
 
 //NSCalendarsUsageDescription                      日历权限
 //App需要您的同意,才能访问日历
-
-//NSLocationWhenInUseUsageDescription      定位权限
-//App需要您的同意,才能在使用期间访问位置
-
-//NSLocationAlwaysUsageDescription            定位权限
-//App需要您的同意,才能始终访问位置
 
 //NSRemindersUsageDescription 提醒事项
 //App需要您的同意,才能访问提醒事项
